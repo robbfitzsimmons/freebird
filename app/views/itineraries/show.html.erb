@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Airline:</strong>
+  <%= @itinerary.airline %>
+</p>
+
+<p>
+  <strong>Flight number:</strong>
+  <%= @itinerary.flight_number %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @itinerary.date %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @itinerary.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @itinerary.destination %>
+</p>
+
+<p>
+  <strong>Roundtrip:</strong>
+  <%= @itinerary.roundtrip %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @itinerary.price %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @itinerary.user %>
+</p>
+
+<%= link_to 'Edit', edit_itinerary_path(@itinerary) %> |
+<%= link_to 'Back', itineraries_path %>
