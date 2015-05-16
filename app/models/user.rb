@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   before_create :pay_with_card, unless: Proc.new { |user| user.admin? }
   after_create :sign_up_for_mailing_list
 
+  has_many :itineraries
+
   attr_accessor :stripeToken
 
   def set_default_role

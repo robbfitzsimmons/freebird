@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516215112) do
+ActiveRecord::Schema.define(version: 20150516221128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +19,15 @@ ActiveRecord::Schema.define(version: 20150516215112) do
   create_table "itineraries", force: :cascade do |t|
     t.string   "airline"
     t.integer  "flight_number"
-    t.date     "date"
+    t.date     "date_of_travel"
     t.string   "origin"
     t.string   "destination"
     t.boolean  "roundtrip"
     t.decimal  "price"
     t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.date     "date_purchased"
   end
 
   add_index "itineraries", ["user_id"], name: "index_itineraries_on_user_id", using: :btree

@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     post 'pay', to: 'registrations#pay'
   end
   resources :users
-  root :to => 'visitors#index'
+  root :to => 'itineraries#new'
 end
