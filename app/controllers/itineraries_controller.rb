@@ -28,7 +28,7 @@ class ItinerariesController < ApplicationController
 
     respond_to do |format|
       if @itinerary.save
-        format.html { redirect_to @itinerary, notice: 'Itinerary was successfully created.' }
+        format.html { redirect_to new_user_registration_path, notice: "Great! Let's keep going." }
         format.json { render :show, status: :created, location: @itinerary }
       else
         format.html { render :new }
